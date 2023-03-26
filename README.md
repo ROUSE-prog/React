@@ -1,15 +1,17 @@
 # React
-Contains Projects built with React
-## Adopt A Pet
+## Contains Projects built with React
+Table of Contents
 
-## Expence Tracker
+### Adopt A Pet
 
-## MediaStream
+### Expence Tracker
 
-## Property Finder
+### MediaStream
 
-## Reddit
+### Property Finder
 
-## Streamlist 
+### Reddit
 
-##Paper To-do list.
+### Streamlist 
+
+### Paper To-do list.
