@@ -1,0 +1,14 @@
+.weatherContainer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .temperature {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .weatherDescription {
+    text-transform: capitalize;
+  }
+  

@@ -1,0 +1,29 @@
+.historyContainer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  .historyTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .historyList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .historyItem {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .historyItem:last-child {
+    border-bottom: none;
+  }
+  

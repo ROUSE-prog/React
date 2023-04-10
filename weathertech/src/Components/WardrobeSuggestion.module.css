@@ -1,0 +1,18 @@
+.suggestionContainer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  .suggestionTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .suggestionText {
+    font-size: 1.2rem;
+  }
+  
