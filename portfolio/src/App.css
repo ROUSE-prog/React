@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 40px;
+  padding-top: 70px; /* Add padding to prevent content overlap */
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  
+}
+
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+:root {
+  --light-bg: #ffffff;
+  --light-text: #333333;
+  --light-nav: #f5f5f5;
+
+  --dark-bg: rgba(34, 84, 34, 0.85);
+  --dark-text: #f5f5f5;
+  --dark-nav:rgba(34, 84, 34, 0.85);
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+
+/* Add other rules that should change color with the theme */
+.App.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+
+
+/* Add other rules that should change color with the theme */
+.about-section {
+  margin-top: 100px; /* Adjust this value to move the About section further down */
+}
+
+.projects-section {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
