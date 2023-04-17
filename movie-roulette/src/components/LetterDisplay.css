@@ -1,0 +1,11 @@
+/* src/components/LetterDisplay.css */
+.letter-display {
+    text-align: center;
+  }
+  
+  .letter {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  }
+  
