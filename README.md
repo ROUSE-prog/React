@@ -6,8 +6,12 @@ Table of Contents
 Practing using React Router to add client-side routing to a React Application. Specifically, 
 I built a pet adoption website that allows users to view all the adoptable pets of a particular species and view the profiles of specific adoptable pets.
 
-### Expence Tracker
+### Bug Tracker:
+
+### Expence Tracker:
 An expense tracking application with data visualization - developed using React, Node, Express, MongoDB and Victory.
+
+###Falling Simulation:
 
 ### MediaStream
 A media streaming application with media upload and stream features - developed using React, Node, Express and MongoDB.
@@ -18,3 +22,5 @@ The classic Todos Tracker as a Progressive Web App. Built using React, Redux, le
 
 ### Streamlist 
 Creating an app playlist that can create a playlist on any music streaming service. Built with React + Firebase Coming Soon!
+
+###Weatherware:
