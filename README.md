@@ -26,6 +26,7 @@ A media streaming application with media upload and stream features - developed 
 
 ### Paper To-do List
 The classic Todos Tracker as a Progressive Web App. Built using React, Redux, leveraging styled-components, PaperCSS, Service Worker tools. Data is retained using localStorage.
+
 ![Giphy](https://media.giphy.com/media/26DNeo2xDmfj3plbW/giphy.gif)
 
 ### Streamlist
