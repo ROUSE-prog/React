@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import ThemeContext from './ThemeContext';
 import ThemeToggle from './ThemeToggle';
+import './App.css';
 import styles from './App.module.css';
 import SearchBar from './Components/SearchBar';
 import WeatherDisplay from './Components/WeatherDisplay';
 import WardrobeSuggestion from './Components/WardrobeSuggestion';
+
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -29,13 +31,13 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={theme === 'light' ? styles.light : styles.dark}>
-        <ThemeToggle />
+      <div className={theme === 'dark' ? styles.light : styles.dark}>
+        
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-4">Weatherware</h1>
           <SearchBar setLocation={setLocation} />
           <WeatherDisplay location={location} onTemperatureUpdate={handleTemperatureUpdate} />
     <WardrobeSuggestion temperature={temperature} />
+    <ThemeToggle />
         </div>
       </div>
     </ThemeContext.Provider>

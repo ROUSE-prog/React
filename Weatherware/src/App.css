@@ -1,17 +1,22 @@
 .App {
   text-align: center;
+  font-family: 'Everett', sans-serif;
+ 
 }
 
+
 .App-logo {
-  text-align: center;
   height: 40vmin;
   pointer-events: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .name {
-  text-align: center;
-  
-  pointer-events: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,7 +26,7 @@
 }
 
 .App-header {
-  background-color: #295ec9;
+  background-color: #3a6ea5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,10 +34,21 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2rem 0;
 }
 
 .App-link {
   color: #61dafb;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+
+.App-link:hover {
+  color: #42a5f5;
+  border-bottom-color: #42a5f5;
 }
 
 @keyframes App-logo-spin {
