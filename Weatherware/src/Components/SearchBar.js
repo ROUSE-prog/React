@@ -14,9 +14,9 @@ const SearchBar = ({ setLocation }) => {
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search for a location"
+        placeholder="Where are you?"
       />
-      <button type="submit">Search</button>
+    
     </form>
   );
 };

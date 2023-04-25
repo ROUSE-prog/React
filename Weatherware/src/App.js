@@ -10,37 +10,30 @@ import WardrobeSuggestion from './Components/WardrobeSuggestion';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
-  const [location, setLocation] = useState('New York');
+  const [location, setLocation] = useState('Where are you?');
   const [temperature, setTemperature] = useState(null);
+  const [condition, setCondition] = useState(null);
 
   const handleTemperatureUpdate = (temp) => {
     setTemperature(temp);
+    setCondition(condition);
   };
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
-  const handleSearch = (location) => {
-    setLocation(location);
-  };
-
-  const updateTemperature = (newTemperature) => {
-    setTemperature(newTemperature);
-  };
-
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={theme === 'dark' ? styles.light : styles.dark}>
-        
-        <div className="container mx-auto">
-          <SearchBar setLocation={setLocation} />
-          <WeatherDisplay location={location} onTemperatureUpdate={handleTemperatureUpdate} />
-    <WardrobeSuggestion temperature={temperature} />
+    <div className={theme === 'dark' ? styles.light : styles.dark}>
+    <div className="app-container">
+    <WeatherDisplay location={location} onTemperatureUpdate={handleTemperatureUpdate} />
+    <SearchBar setLocation={setLocation} />
+    <WardrobeSuggestion temperature={temperature} condition={condition}/>
+    </div>
     <ThemeToggle />
-        </div>
-      </div>
-    </ThemeContext.Provider>
+    </div>
+   </ThemeContext.Provider>
   );
 };
 

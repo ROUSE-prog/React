@@ -1,11 +1,20 @@
 import React from 'react';
 import styles from './WardrobeSuggestion.module.css';
 
-const WardrobeSuggestion = ({ temperature }) => {
+const WardrobeSuggestion = ({ temperature, condition }) => {
   let suggestion = '';
   let shoeType = '';
   let layers = '';
   let sunscreen = '';
+  let caution = '';
+
+  if (condition === 'Rain' || 'Drizzle') {
+    caution = 'Carry an umbrella or wear a waterproof jacket with a hood';
+  } else if (condition === 'Snow') {
+    caution = 'Wear waterproof boots and use caution when walking or driving';
+  } else if (condition === 'Drought') {
+    caution = 'Stay hydrated and be mindful of water usage';
+  }
 
   if (temperature < 0) {
     suggestion = 'Heavy winter clothing, thermal underwear, and snow boots';
@@ -46,15 +55,21 @@ const WardrobeSuggestion = ({ temperature }) => {
 
   return (
     <div className={styles.suggestionContainer}>
-      <h2 className={styles.suggestionTitle}>Wardrobe Suggestion</h2>
-      <p className={styles.suggestionText}>{suggestion}</p>
-      <h3 className={styles.subTitle}>Shoe Type</h3>
-      <p className={styles.subText}>{shoeType}</p>
-      <h3 className={styles.subTitle}>Layers of Clothing</h3>
+      <h2 className={styles.suggestionTitle}>Might I Suggest</h2>
+      <h3 className={styles.subTitle}>What to wear</h3>
       <p className={styles.subText}>{layers}</p>
-      <h3 className={styles.subTitle}>Sunscreen</h3>
+      <p className={styles.suggestionText}>{suggestion}</p>
+      <h3 className={styles.subTitle}>Shoes</h3>
+      <p className={styles.subText}>{shoeType}</p>
+      <h3 className={styles.subTitle}>Protection</h3>
       <p className={styles.subText}>{sunscreen}</p>
-      </div>
+      {caution && (
+        <>
+        <h3 className={styles.subTitle}>Warning!</h3>
+          <p className={styles.subText}>{caution}</p>
+        </>
+      )}
+    </div>
   );
 };
 
