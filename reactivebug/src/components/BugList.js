@@ -1,26 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import Bug from './Bug';
+import NumberBox from './NumberBox';
+import './bugList.css'; // Import the CSS file
 
 const BugList = () => {
-  // Fetch the list of bugs from the API or state management
-  // For now, we'll use an array of placeholder bugs
-  const bugs = [
-    { id: 1, title: 'Bug 1', status: 'Open' },
-    { id: 2, title: 'Bug 2', status: 'Closed' },
-  ];
+  const [bugs, setBugs] = useState([
+    {
+      id: 1,
+      title: 'Bug 1',
+      description: 'This is the first bug.'
+    },
+    {
+      id: 2,
+      title: 'Bug 2',
+      description: 'This is the second bug.'
+    },
+    {
+      id: 3,
+      title: 'Bug 3',
+      description: 'This is the third bug.'
+    }
+  ]);
+  
+  useEffect(() => {
+    // Fetch bug data here and update the state
+    // ...
+  }, []);
 
   return (
-    <div>
+    <div className="bug-list-container">
       <h2>Bug List</h2>
-      <ul>
-        {bugs.map((bug) => (
-          <li key={bug.id}>
-            <Link to={`/bug/${bug.id}`}>{bug.title}</Link> - {bug.status}
-          </li>
-        ))}
-      </ul>
+      {bugs.map((bug, index) => (
+        <div key={bug.id} className="bug-list-item">
+          <NumberBox index={index + 1} />
+          <Bug bug={bug} />
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Bug
+export default BugList;
