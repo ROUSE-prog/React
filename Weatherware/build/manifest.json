@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Weatherware",
+  "version": "1.0",
+  "description": "Weatherware is a weather application designed to provide accurate and up-to-date weather information for any location.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "48": "logo192.png",
+      "128": "logo512.png"
+    }
+  },
+  "icons": {
+    "48": "logo192.png",
+    "128": "logo512.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline';"
+  }
+}
