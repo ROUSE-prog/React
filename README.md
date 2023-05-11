@@ -38,4 +38,4 @@ The classic Todos Tracker as a Progressive Web App. Built using React, Redux, le
 ### Streamlist(Dev State)
 Creating an app playlist that can create a playlist on any music streaming service. Built with React + Firebase. Coming Soon!
 
-### Weatherware(In Progress)
+### Weatherware(In Progress
