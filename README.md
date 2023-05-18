@@ -10,7 +10,7 @@ Table of Contents
 6. [MediaStream](#mediastream)
 7. [Movie Roulette](#Movie-Roulette)
 8. [Paper To-do List](#paper-to-do-list)
-9. [Streamlist](#streamlist)
+9. [Pllaylist](#Pllaylist)
 10. [Weatherware](#weatherware)
 
 ### Adopt A Pet (In progress)
