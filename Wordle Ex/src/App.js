@@ -10,6 +10,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [revealWord, setRevealWord] = useState(false);
+  const [currentWord, setCurrentWord] = useState("");
 
   const fetchWord = async () => {
     try {
@@ -37,6 +38,14 @@ function App() {
     setGuess(e.target.value);
   };
 
+  const handleKeyPress = (letter) => {
+    if (guess.length && currentWord.length < 5) {
+      setGuess(guess + letter);
+    }
+  };
+  
+  
+
   const handleReveal = () => {
     setRevealWord(true);
   };
@@ -48,7 +57,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (guess.length === 5 && attempts < 6) {
+    if (guess.length && currentWord.length === 5 && attempts < 6) {
       let guessHistory = {
         guess: guess,
         matches: guess.split("").map((g, i) => {
@@ -71,6 +80,7 @@ function App() {
       if (guess === secretWord) {
         setScore(score + 1);
         setGuess("");
+        setCurrentWord("");
         setAttempts(0);
         fetchWord();
       } else {
@@ -85,7 +95,18 @@ function App() {
       <h1>Wordle Clone</h1>
       <ScoreTracker score={score} />
       <form onSubmit={handleSubmit}>
-        <input type="text" value={guess} onChange={handleChange} maxLength="5" />
+        <div className="keyboard">
+          {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter, index) => (
+            <button key={index} onClick={() => handleKeyPress(letter)}>
+              {letter}
+            </button>
+          ))}
+        </div>
+        <div className="currentWord">
+  {currentWord.split('').map((letter, index) => (
+    <span key={index}>{letter}</span>
+  ))}
+</div>
         <button type="submit">Guess</button>
       </form>
       <button onClick={handleReveal}>Reveal Secret Word</button>
@@ -119,6 +140,7 @@ function App() {
       )}
     </div>
   );
+  
 
 }
 
