@@ -37,11 +37,10 @@ The classic Todos Tracker as a Progressive Web App. Built using React, Redux, le
 
 ### Streamlist(Dev State)
 Creating an app playlist that can create a playlist on any music streaming service. Built with React + Firebase. Coming Soon!
-
-### Weatherware(Deployed)
  
-whatweatherware.netlify.app
+### [Weatherware](https://whatweatherware.netlify.app) (Deployed)
 
 Weatherware is an innovative, user-friendly weather application designed with React.js. It provides users with real-time weather information based on the provided location, including temperature and weather conditions.
+
 <img width="1437" alt="Screenshot 2023-06-26 at 1 27 07 PM" src="https://github.com/ROUSE-prog/React/assets/52251052/4e1fb56a-679a-45ad-b66f-cf7ab861016f">
 
