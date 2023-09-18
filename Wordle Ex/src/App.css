@@ -81,3 +81,7 @@ p {
 .keyboard button {
   margin: 5px;
 }
+
+.pressed-key {
+  background-color: #a1c6ff; 
+}

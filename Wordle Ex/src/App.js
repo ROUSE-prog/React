@@ -5,12 +5,15 @@ import './App.css';
 
 function App() {
   const [guess, setGuess] = useState("");
+  const [pressedKey, setPressedKey] = useState("");
   const [history, setHistory] = useState([]);
   const [secretWord, setSecretWord] = useState("");
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [revealWord, setRevealWord] = useState(false);
   const [currentWord, setCurrentWord] = useState("");
+ 
+
 
   const fetchWord = async () => {
     try {
@@ -41,6 +44,13 @@ function App() {
   const handleKeyPress = (letter) => {
     if (guess.length && currentWord.length < 5) {
       setGuess(guess + letter);
+      setPressedKey(letter);
+      console.log("Pressed key:", letter);
+      console.log("Current guess:", guess + letter);
+
+      setTimeout(() => {
+        setPressedKey("");
+      }, 200);
     }
   };
   
@@ -52,7 +62,7 @@ function App() {
 
   const handleClose = () => {
     setRevealWord(false);
-    fetchWord(); // fetch a new word after closing the modal
+    fetchWord();
   };
 
   const handleSubmit = (e) => {
@@ -96,12 +106,17 @@ function App() {
       <ScoreTracker score={score} />
       <form onSubmit={handleSubmit}>
         <div className="keyboard">
-          {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter, index) => (
-            <button key={index} onClick={() => handleKeyPress(letter)}>
-              {letter}
-            </button>
-          ))}
-        </div>
+  {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter, index) => (
+    <button
+      key={index}
+      onClick={() => handleKeyPress(letter)}
+      className={letter === pressedKey ? "pressed-key" : ""}
+    >
+      {letter}
+    </button>
+  ))}
+</div>
+
         <div className="currentWord">
   {currentWord.split('').map((letter, index) => (
     <span key={index}>{letter}</span>
