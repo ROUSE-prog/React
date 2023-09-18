@@ -20,12 +20,15 @@ Table of Contents
 A fun and engaging React app game that challenges users to test their movie knowledge based on a randomly generated letter. When the game starts, the app displays a random letter, and the user is prompted to submit a movie title that starts with the given letter.
 
 ### Paper To-do List(Deployed)
+[Live Demo](https://paper-todo.firebaseapp.com)
+
 The classic Todos Tracker as a Progressive Web App. Built using React, Redux, leveraging styled-components, PaperCSS, Service Worker tools. Data is retained using localStorage.
 
 ![Giphy](https://media.giphy.com/media/26DNeo2xDmfj3plbW/giphy.gif)
 
  
 ### [Weatherware](https://whatweatherware.netlify.app) (Deployed)
+[Live Demo](https://whatweatherware.netlify.app)
 
 Weatherware is an innovative, user-friendly weather application designed with React.js. It provides users with real-time weather information based on the provided location, including temperature and weather conditions.
 
