@@ -28,6 +28,10 @@ const Game = () => {
     setMovieData(response.data);
     setIsCorrect(true);
     setScore(score + 1);
+
+    setRandomLetter(generateRandomLetter());
+
+
   } else {
     console.log("Invalid movie title!");
     setMovieData(null);
@@ -44,9 +48,9 @@ const Game = () => {
 // Handle the case when the movie title does not start with the given letter
 console.log("Invalid movie title!");
  }
+
 };
   const resetGame = () => {
-    setRandomLetter(generateRandomLetter());
     setIsCorrect(null);
   };
 

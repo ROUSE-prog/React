@@ -13,9 +13,11 @@ function App() {
           given letter.
         </p>
       </header>
+      <body className="App-body">
       <main>
         <Game />
       </main>
+      </body>
     </div>
   );
 }
