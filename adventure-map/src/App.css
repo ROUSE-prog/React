@@ -1,38 +1,43 @@
+/* Define default (dark) theme colors */
+:root {
+  --background-color: #333;
+  --text-color: #eee;
+  --primary-color: #4caf50;
+}
+
+/* Define light theme colors */
+.light {
+  --background-color: #eee;
+  --text-color: #333;
+  --primary-color: #009688;
+}
+
+/* Style the App based on variables */
 .App {
-  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* React-Select specific styles (optional) */
+.react-select__control {
+  border-color: var(--primary-color) !important;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Add any other styles and customize as needed */
